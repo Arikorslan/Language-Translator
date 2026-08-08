@@ -1,5 +1,5 @@
 import gtts
-import playsound
+# import playsound
 import random
 from string import digits
 import os
