@@ -42,7 +42,7 @@ from backend.voiceOutput import TextToSpeech
 from update import GitHubUpdater, ReleaseAsset, ReleaseInfo, UpdateError
 
 
-APP_VERSION = "10.6.0"
+APP_VERSION = "1.0.0"
 APP_COPYRIGHT = "Copyright Â© Ariko 2026"
 DEFAULT_GITHUB_REPO = os.getenv("LANG_TRANS_GITHUB_REPO", "owner/repo")
 

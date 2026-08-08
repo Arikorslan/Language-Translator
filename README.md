@@ -2,6 +2,10 @@
 
 A desktop language translator app migrated to PyQt6.
 
+## Maintenance Guide
+For operational details, release checks, troubleshooting, and maintenance workflows, see:
+- `MAINTENANCE.md`
+
 ## Features
 - Text translation with optional auto-detect source language
 - Voice input (speech-to-text)
@@ -63,14 +67,10 @@ Use the included build script:
 Output binary:
 - `dist/LANG-TRANS.exe`
 
-## GitHub Actions Release Build
-Workflow file:
-- `.github/workflows/windows-release.yml`
-
-Behavior:
-- Builds on manual run (`workflow_dispatch`) and version tags (`v*`).
-- Uploads `dist/LANG-TRANS.exe` as an artifact.
-- On tag builds, attaches the EXE to the GitHub Release.
+## Release Process (Current)
+- This repository currently includes a local Windows build script (`build_windows.ps1`).
+- No GitHub Actions workflow file is present in the current project snapshot.
+- If CI-based release automation is needed, add a workflow under `.github/workflows/`.
 
 ## Standalone Update Script
 `update.py` supports manual checks and downloads:
@@ -83,3 +83,4 @@ python update.py --repo owner/repo --current-version 10.6.0 --download --output 
 ## Notes
 - Set a real GitHub repo for update checks. The default `owner/repo` is a placeholder.
 - Release tags should be semantic-style tags (`v10.7.0` or `10.7.0`) for version comparison.
+- `requirements.txt` currently needs conflict-marker cleanup before it can be considered fully stable for fresh environment installs.
